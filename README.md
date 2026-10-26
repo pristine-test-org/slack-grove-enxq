@@ -7,6 +7,6 @@ TypeScript, no framework. The page reads a live list from the shared Supabase te
 
 | App | Folder | Production | Preview gate |
 |---|---|---|---|
-| Cowslip | `apps/cowslip-qm5` | _not deployed_ | yes |
-| Woad | `apps/woad-lfp` | _not deployed_ | yes |
-| Sedum | `apps/sedum-zfy` | _not deployed_ | yes |
+| Cowslip | `apps/cowslip-qm5` | https://slack-grove-enxq-cowslip-qm5.netlify.app | yes |
+| Woad | `apps/woad-lfp` | https://slack-grove-enxq-woad-lfp.netlify.app | yes |
+| Sedum | `apps/sedum-zfy` | https://slack-grove-enxq-sedum-zfy.netlify.app | yes |
