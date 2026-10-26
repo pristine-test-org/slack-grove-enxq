@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How Cowslip works</title>
+    <style>
+      :root { font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; --accent: #2f7d4f; }
+      body { margin: 0; }
+      header, footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      header a { color: var(--accent); }
+      main { max-width: 44rem; margin: 0 auto; padding: 2rem 1rem; }
+      /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+      h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+        background: linear-gradient(90deg, #2f7d4f, #c8a22b);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      /* Intentional, for Impeccable's test drive: text in a light grey well under 4.5:1. */
+      .lede { color: #c9c9c4; font-size: 1.1rem; line-height: 1.5; }
+      /* Intentional, for Impeccable's test drive: body text flush with the viewport edge, no background. */
+      .edge { margin: 0 -1rem; padding: 0; line-height: 1.6; }
+      .steps { padding-left: 1.2rem; line-height: 1.8; }
+      table { border-collapse: collapse; width: 100%; margin: 1.5rem 0; }
+      th, td { text-align: left; padding: 0.5rem; border-bottom: 1px solid #e5e5e0; }
+      /* Intentional, for Impeccable's test drive: link text under the 11px floor. */
+      .back { font-size: 10px; color: var(--accent); }
+      /* Intentional, for Impeccable's test drive: transition on a layout property. */
+      .bar { height: 0.6rem; width: 40%; background: var(--accent); border-radius: 0.3rem; transition: width 0.3s; }
+      .bar:hover { width: 100%; }
+      footer { color: #555; font-size: 0.9rem; border-top: 1px solid #e5e5e0; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="/">Cowslip</a>
+    </header>
+    <main>
+      <h1>How Cowslip works</h1>
+      <p class="lede">One calm page that shows the shared list the way your team left it, without logins or noise.</p>
+      <p class="edge">Cowslip reads the shared list each time the page opens, so what you see is what everyone else sees. Nothing is stored in your browser, and there is nothing to set up before you start.</p>
+      <ol class="steps">
+        <li>Open the front door and read the heading.</li>
+        <li>Scroll to the live list to see the newest five items.</li>
+        <li>Items with a tick are finished; the rest are still open.</li>
+      </ol>
+      <table>
+        <thead><tr><th>Part of the page</th><th>What it shows</th></tr></thead>
+        <tbody>
+          <tr><td>Front door</td><td>What Cowslip is and why it helps</td></tr>
+          <tr><td>Live list</td><td>The five newest items on the shared list</td></tr>
+          <tr><td>Footer</td><td>Where the page comes from</td></tr>
+        </tbody>
+      </table>
+      <div class="bar" role="img" aria-label="Most of the list is still open"></div>
+      <p><a class="back" href="/">Back to the front door</a></p>
+    </main>
+    <footer>Cowslip · the calm front door to the shared list</footer>
+  </body>
+</html>
