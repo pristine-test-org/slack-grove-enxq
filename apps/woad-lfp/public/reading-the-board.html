@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reading the board · Woad</title>
+    <style>
+      :root { font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; --accent: #3b4bc8; }
+      body { margin: 0; }
+      header, footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      header a { color: var(--accent); font-weight: 700; }
+      main { max-width: 44rem; margin: 0 auto; padding: 2rem 1rem; }
+      /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+      h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+        background: linear-gradient(90deg, #3b4bc8, #c83b8e);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      /* Intentional, for Impeccable's test drive: text in a light grey well under 4.5:1. */
+      .lede { color: #c9c9c4; font-size: 1.1rem; line-height: 1.5; }
+      /* Intentional, for Impeccable's test drive: body text flush with the viewport edge, no background. */
+      .edge { margin: 0 -1rem; padding: 0; line-height: 1.6; }
+      .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; padding: 0; list-style: none; margin: 1.5rem 0; }
+      .cards li { border: 1px solid #e5e5e0; border-radius: 0.5rem; padding: 0.75rem; }
+      .cards strong { display: block; font-size: 1.5rem; color: var(--accent); }
+      /* Intentional, for Impeccable's test drive: link text under the 11px floor. */
+      .back { font-size: 10px; color: var(--accent); }
+      /* Intentional, for Impeccable's test drive: transition on a layout property. */
+      .bar { height: 0.6rem; width: 40%; background: var(--accent); border-radius: 0.3rem; transition: width 0.3s; }
+      .bar:hover { width: 100%; }
+      footer { color: #555; font-size: 0.9rem; border-top: 1px solid #e5e5e0; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="/">Woad</a>
+    </header>
+    <main>
+      <h1>Reading the board</h1>
+      <p class="lede">The board puts everything on the shared list in one view, so you can see what is open and what is done at a glance.</p>
+      <p class="edge">Woad pulls the list fresh whenever the page opens. Finished items carry a tick at the start of the line, and open items are plain text, so a quick scan tells you where the list stands.</p>
+      <ul class="cards">
+        <li><strong>5</strong>Newest items shown</li>
+        <li><strong>1</strong>Page to open</li>
+        <li><strong>0</strong>Accounts needed</li>
+      </ul>
+      <div class="bar" role="img" aria-label="Most of the list is still open"></div>
+      <p><a class="back" href="/">Back to the board</a></p>
+    </main>
+    <footer>Woad · the board for the shared list</footer>
+  </body>
+</html>
